@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>NFT preview card component</title>
+
+
+  <style>
+    @font-face {
+  font-family: Outfit;
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf");}
+    body{
+      margin: 0;
+      background: #0D192C;
+      font-family: Outfit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.container{
+  height: 543px;
+width: 327px;
+margin-top: 62px;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+
+
+/* Very Dark Blue (card BG) */
+
+background: #15263F;
+box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+border-radius: 15px;
+}
+
+ .title{
+  font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 28px;
+/* identical to box height */
+margin: 0;
+margin-left: 24px;
+margin-top: 24px;
+cursor: pointer;
+
+/* White */
+
+color: #FFFFFF;
+ }
+ .paragraph{
+  font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 26px;
+/* or 144% */
+margin: 0;
+margin-left: 24px;
+margin-top: 12px;
+
+/* Soft Blue */
+
+color: #8BACD9;
+ }
+ 
+ .eth{
+  font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* Cyan */
+
+color: #00FFF8;
+ }
+ .eth-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 6.49px;
+  margin-left: 24px;
+ }
+ .eth-img{
+  height: 18px;
+width: 11px;
+
+border-radius: 0px;
+
+ }
+
+ .time-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 6.49px;
+ }
+ .time-img{
+  height: 13.333333015441895px;
+width: 13.333333015441895px;
+
+border-radius: 0px;
+
+ }
+ .time{
+  font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* Soft Blue */
+margin: 0;
+color: #8BACD9;
+ }
+ .parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 99.15px;
+ }
+ .line{
+  border: 1px solid #2E405A;
+  
+width: 278px;
+
+border-radius: 0px;
+margin: 0;
+margin-left: 24px;
+
+ }
+
+ .profile-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 16px;
+ }
+
+ .profile-img{
+  height: 33px;
+width: 33px;
+left: 24px;
+top: 486px;
+border-radius: 0px;
+margin-left: 24px;
+ }
+ .firstp{
+  font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+margin-left: 16px;
+
+/* Soft Blue */
+
+color: #8BACD9;
+ }
+ .secondp{
+  font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+
+margin-left: 5px;
+/* White */
+
+color: #FFFFFF;
+ }
+
+ 
+ .container-overlay{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+
+  
+ }
+ .img{
+  display: block;
+  height: 278px;
+width: 278px;
+margin-left: 24px;
+border-radius: 8px;
+margin-top: 16px;
+ }
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 278px;
+width: 278px;
+  opacity: 0;
+ 
+
+}
+.icon {
+opacity: 0;
+   color:#ffff ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+ 
+}
+
+.container:hover .overlay {
+  margin-left: 24px;
+ 
+margin-top: 16px;
+  background: #00FFF8 ;
+mix-blend-mode: normal;
+opacity: 0.5;
+border-radius: 8px;
+cursor: pointer;
+
+}
+.container:hover .icon {
+opacity: 1;
+cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+
+ 
+
+  <div class="container">
+<div class="container-overlay">
+    <img src="./images/image-equilibrium.jpg" alt="equilibrium" class="img" ></img>
+    <div class="overlay">
+     
+      </div>
+      <img class="icon" src="./images/icon-view.svg" alt="icon"/>
+  </div>
+    <h1 class="title">Equilibrium #3429</h1>
+    <p class="paragraph">Our Equilibrium collection<br/> promotes balance and calm.</p>
+    <div class="parent">
+<div class="eth-container">
+  <img class="eth-img" src="./images/icon-ethereum.svg" alt="etherium"/>
+  <p class="eth">0.041 ETH</p>
+</div>
+<div class="time-container">
+  <img class="time-img" src="images/icon-clock.svg" alt="time"/>
+  <p class="time">3 days left</p>
+</div>
+</div>
+<hr class="line"/>
+<div class="profile-container">
+  <img class="profile-img" src="./images/image-avatar.png" alt="time"/>
+  <p class="firstp">Creation of</p>
+  <p class="secondp">Jules Wyvern</p>
+</div>
+  </div>
+</body>
+</html>
